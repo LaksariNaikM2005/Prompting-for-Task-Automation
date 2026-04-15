@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Automation AI | Extract Insights</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Prompting for <span class="accent">Task Automation</span></h1>
+            <p>Leverage Gemini AI to transform unstructured text into actionable insights and clean data structures instantly.</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <div class="input-wrapper">
+                    <textarea id="inputText" placeholder="Paste meeting notes, project emails, or raw data here..."></textarea>
+                    <div class="dataset-import">
+                        <label class="file-label" for="datasetFile">Dataset file</label>
+                        <input id="datasetFile" class="file-input" type="file" accept=".json,.csv" />
+                        <button id="templateBtn" class="secondary-btn">Download Template</button>
+                        <button id="importBtn" class="secondary-btn">Import Dataset</button>
+                    </div>
+                    <button id="processBtn" class="primary-btn">
+                        <span class="btn-text">Process with Gemini AI</span>
+                        <div class="loader" id="loader"></div>
+                    </button>
+                </div>
+            </section>
+
+            <section id="datasetSection" class="dataset-section hidden">
+                <div class="card full-width">
+                    <div class="card-header">
+                        <div class="header-left">
+                            <div class="icon-box">🗂️</div>
+                            <h3>Imported Dataset</h3>
+                        </div>
+                    </div>
+                    <div id="datasetSummary" class="dataset-summary"></div>
+                </div>
+            </section>
+
+            <section id="outputSection" class="output-section hidden">
+                <div class="grid">
+                    <!-- Summary Card -->
+                    <div class="card" id="summaryCard">
+                        <div class="card-header">
+                            <div class="header-left">
+                                <div class="icon-box">✨</div>
+                                <h3>Key Summary</h3>
+                            </div>
+                        </div>
+                        <ul id="summaryList" class="content-list"></ul>
+                    </div>
+
+                    <!-- Structured JSON Card -->
+                    <div class="card" id="jsonCard">
+                        <div class="card-header">
+                            <div class="header-left">
+                                <div class="icon-box">💎</div>
+                                <h3>Structured JSON</h3>
+                            </div>
+                            <div class="action-btns">
+                                <button id="downloadBtn" class="btn-secondary">
+                                    <span>Download</span> 📥
+                                </button>
+                            </div>
+                        </div>
+                        <pre id="jsonOutput" class="code-block"></pre>
+                    </div>
+
+                    <!-- Raw Processed Text Card -->
+                    <div class="card full-width" id="rawCard">
+                        <div class="card-header">
+                            <div class="header-left">
+                                <div class="icon-box">📜</div>
+                                <h3>Raw Text</h3>
+                            </div>
+                            <div class="action-btns">
+                                <button id="copyBtn" class="btn-secondary">
+                                    <span>Copy</span> 📋
+                                </button>
+                            </div>
+                        </div>
+                        <div id="rawOutput" class="content-text"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Task Automation AI. Powered by Google Gemini. Optimized for speed & precision.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
