@@ -14,6 +14,9 @@ __pycache__/
 node_modules/
 frontend/node_modules/
 
+# Nested local repository
+Prompting-for-Task-Automation/
+
 # Local environment secrets
 .env
 .env.*
