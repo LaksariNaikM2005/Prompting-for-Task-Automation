@@ -16,6 +16,7 @@ frontend/node_modules/
 
 # Nested local repository
 Prompting-for-Task-Automation/
+LinkedIn.md
 
 # Local environment secrets
 .env
